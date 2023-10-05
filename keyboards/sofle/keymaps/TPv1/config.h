@@ -43,12 +43,12 @@
 #define RGBLIGHT_LAYERS
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN D3
+#define WS2812_DI_PIN D3
 
 #ifdef RGB_MATRIX_ENABLE
     #define RGBLED_NUM 35    // Number of LEDs
     #define RGBLED_NUM 35    // Number of LEDs
-    #define DRIVER_LED_TOTAL RGBLED_NUM
+    #define RGB_MATRIX_LED_COUNT RGBLED_NUM
 #endif
 
 #ifdef RGBLIGHT_ENABLE
@@ -85,7 +85,7 @@
 	//#define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
 	#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 150 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
 
-	#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_GRADIENT_LEFT_RIGHT
+	#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_GRADIENT_LEFT_RIGHT
 
 	#define RGB_MATRIX_HUE_STEP 8
 	#define RGB_MATRIX_SAT_STEP 8
